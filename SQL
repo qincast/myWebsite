@@ -1,0 +1,16 @@
+
+//create table
+
+CREATE TABLE IF NOT EXISTS `mydb`.`userdemo` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(15) NOT NULL,
+  `gender` TINYINT NULL,
+  `password_hash256` VARCHAR(45) NULL,
+  `identity` VARCHAR(10) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+
+
+//TEST INSERT INTO userdemo ()
+
+INSERT INTO userdemo (id,name,gender,password_hash256,identity) VALUES ('1', 'testuser','1','test','Admin')

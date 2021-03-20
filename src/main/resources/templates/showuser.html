@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>show users</title>
+</head>
+<body>
+Show user page.
+<p th:text="${message}"></p>
+<div th:each="userResult : ${userList}"> <!-- 遍历整个div-p，不推荐-->
+    <p th:text="${userResult}" />
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+</head>
+<h1>This is index.</h1>
+
+<!--/*@thymesVar id="isLogin" type=""*/-->
+<a href="/login" th:if="not ${isLogin}">Login</a>
+<a href="/logout" th:if="${isLogin}">Logout</a>
+<p th:if = "${isLogin}">welcome <span th:text="${userName}"></span></p>
+<a href="/showuser">Show Users</a>
+
+</body>
+</html>

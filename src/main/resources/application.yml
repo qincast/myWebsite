@@ -1,0 +1,25 @@
+server:
+  port: 8080
+database:
+  db_url: "jdbc:mysql://localhost:3306/mydb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+  username: "admin"
+  password: "A523as3AKLH@#"
+  jdbc_driver: "com.mysql.cj.jdbc.Driver"
+user:
+  gendermap:
+    index:
+      - 0
+      - 1
+      - 2
+    type:
+      - "undefined"
+      - "male"
+      - "female"
+
+testentity:
+  ymlmessage: "LOAD FROM YML FILE!"
+spring:
+  mvc:
+    view:
+      prefix: resources/
+      suffix: .html

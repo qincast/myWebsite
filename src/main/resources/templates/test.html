@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>This is a test for login page</p>
+
+<p th:text="${message}"> </p>
+<p th:if = "${isLogin}"> islogin =true</p>
+<p th:if = "not ${isLogin}"> islogin =false</p>
+<p th:if = "${isLogin}">welcome <p th:text="${userName}"></p></p>
+<p th:if = "not ${isLogin}"> islogin =false</p>
+
+</body>
+</html>
