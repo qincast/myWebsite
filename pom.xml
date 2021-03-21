@@ -84,6 +84,10 @@
             <artifactId>mybatis</artifactId>
             <version>3.5.6</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
 
     </dependencies>
 
