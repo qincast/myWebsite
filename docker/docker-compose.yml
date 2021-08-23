@@ -17,7 +17,7 @@ services:
     volumes: 
       - /data/redis:/data
   wordpress:
-    iamge: wordpress:latest
+    image: wordpress:latest
     ports: 
       - "80:80"
     # volumes: 
