@@ -1,0 +1,25 @@
+version: '1.0'
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - /data/mysql:/
+    links:
+      - wordpress
+    environment: 
+      - "MYSQL_ROOT_PASSWORD=aSv12jeas!3Nca"
+      - "MYSQL_DATABASE=qincast"
+      - "TZ=Asia/shanghai"
+  redis:
+    image: redis
+    volumes: 
+      - /data/redis:/
+  wordpress:
+    ports: 
+      - "80:80"
+    links:
+      - mysql
+    volumes: 
+    - /data/wordpress :/
