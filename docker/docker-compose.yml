@@ -1,11 +1,11 @@
-version: '1.0'
+version: '3.0'
 services:
   mysql:
     image: mysql:latest
     ports:
       - "3306:3306"
     volumes:
-      - /data/mysql:/
+      - /data/mysql:/var/lib/mysql
     links:
       - wordpress
     environment: 
@@ -15,11 +15,10 @@ services:
   redis:
     image: redis
     volumes: 
-      - /data/redis:/
+      - /data/redis:/data
   wordpress:
+    iamge: wordpress:latest
     ports: 
       - "80:80"
-    links:
-      - mysql
-    volumes: 
-    - /data/wordpress :/
+    # volumes: 
+    # - /data/wordpress :/
